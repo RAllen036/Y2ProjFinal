@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{026E6BD3-9CF3-406A-96A7-AE4813BBCE1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>Y2Proj</RootNamespace>
+    <AssemblyName>Y2Proj</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Y2Proj.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Y2Proj.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Y2Proj.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Y2Proj.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBDataSet.vb">
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRMaddUser.Designer.vb">
+      <DependentUpon>FRMaddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMaddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMusers.Designer.vb">
+      <DependentUpon>FRMusers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMusers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMforgotLogin.Designer.vb">
+      <DependentUpon>FRMforgotLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMforgotLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMhelp.Designer.vb">
+      <DependentUpon>FRMhelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMhelp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMlogBook.Designer.vb">
+      <DependentUpon>FRMlogBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMlogBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMlogin.Designer.vb">
+      <DependentUpon>FRMlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMlookUp.Designer.vb">
+      <DependentUpon>FRMlookUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMlookUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMmedical.Designer.vb">
+      <DependentUpon>FRMmedical.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMmedical.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMrequest.Designer.vb">
+      <DependentUpon>FRMrequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMrequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMsettings.Designer.vb">
+      <DependentUpon>FRMsettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMsettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMtill.Designer.vb">
+      <DependentUpon>FRMtill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMtill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMtimetable.Designer.vb">
+      <DependentUpon>FRMtimetable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMtimetable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODsidebar.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MODgetConst.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FRMaddUser.resx">
+      <DependentUpon>FRMaddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMforgotLogin.resx">
+      <DependentUpon>FRMforgotLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMhelp.resx">
+      <DependentUpon>FRMhelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMlogBook.resx">
+      <DependentUpon>FRMlogBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMlookUp.resx">
+      <DependentUpon>FRMlookUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMmedical.resx">
+      <DependentUpon>FRMmedical.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMtimetable.resx">
+      <DependentUpon>FRMtimetable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMusers.resx">
+      <DependentUpon>FRMusers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMlogin.resx">
+      <DependentUpon>FRMlogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMrequest.resx">
+      <DependentUpon>FRMrequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMsettings.resx">
+      <DependentUpon>FRMsettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMtill.resx">
+      <DependentUpon>FRMtill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBDataSet.xsc">
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBDataSet.xss">
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
